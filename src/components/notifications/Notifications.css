@@ -1,0 +1,28 @@
+.notifications {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.notification {
+  background: rgba(100,0,0,0.5);
+  margin: 24px;
+  padding: 12px;
+  width: 200px;
+  border-radius: 4px;
+}
+
+.notificationText {
+  color: white;
+  word-wrap:break-word;
+  font-size: 16px;
+  margin: 0;
+}
+
+.notificationTime {
+  color: orange;
+  font-size: 15px;
+  margin: 0;
+}
