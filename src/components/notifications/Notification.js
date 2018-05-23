@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import './Notifications.css';
 
 const Notification = ({ text, time }) => (
-  <div className="notification">
-    <h1 className="notificationText">{text}</h1>
-    <h1 className="notificationTime">@{time}</h1>
+  <div className="notificationAnimation">
+    <div className="notification">
+      <p className="notificationText">{text}</p>
+      <p className="notificationTime">@{time}</p>
+    </div>
   </div>
 );
 
