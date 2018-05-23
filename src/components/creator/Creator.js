@@ -14,7 +14,11 @@ const Creator = () => (
             autoFocus
             placeholder="Create a notification!"
             value={context.state.input}
-            onChange={(event) => { context.handleInputChange(event.target.value); }}
+            onChange={context.handleInputChange}
+            onKeyPress={context.handleInputKeyPress}
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck="false"
           />
           <button
             id="creatorButton"

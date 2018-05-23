@@ -9,18 +9,33 @@ class Provider extends Component {
     notifications: [],
   }
 
+  handleInputKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      this.addNotification();
+    }
+  }
+
+  handleInputChange = (event) => {
+    this.setState({ input: event.target.value });
+  }
+
+  addNotification = () => {
+    if (this.state.input.length > 0) {
+      this.setState(prevState => ({
+        notifications: [...prevState.notifications, { text: prevState.input, time: moment().format('DD MMM h:mm:ssa') }],
+        input: '',
+      }));
+    }
+  }
+
   render() {
     return (
       <Context.Provider
         value={{
           state: this.state,
-          handleInputChange: (input) => { this.setState({ input }); },
-          addNotification: () => {
-            this.setState(prevState => ({
-              notifications: [...prevState.notifications, { text: prevState.input, time: moment().format('DD MMM h:mm:ssa') }],
-              input: '',
-            }));
-          },
+          handleInputKeyPress: this.handleInputKeyPress,
+          handleInputChange: this.handleInputChange,
+          addNotification: this.addNotification,
         }}
       >
         {this.props.children}
@@ -31,6 +46,6 @@ class Provider extends Component {
 
 Provider.propTypes = {
   children: PropTypes.element.isRequired,
-}
+};
 
 export default Provider;
