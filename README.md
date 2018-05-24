@@ -15,4 +15,4 @@ Example project using the new context api introduced in React v16.3.0
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
