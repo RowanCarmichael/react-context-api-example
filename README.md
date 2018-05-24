@@ -12,3 +12,7 @@ Example project using the new context api introduced in React v16.3.0
 
 ## Running tests
 `yarn run test` runs all tests
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

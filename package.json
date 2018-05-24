@@ -1,7 +1,10 @@
 {
   "name": "react-context-api-example",
   "version": "0.0.0",
-  "private": true,
+  "repository": "https://github.com/RowanCarmichael/react-context-api-example.git",
+  "author": "Rowan Carmichael <carmichaelr@hotmail.co.uk>",
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "lodash": "^4.17.10",
     "moment": "^2.22.1",
