@@ -6,7 +6,7 @@
   right: 0;
   overflow: hidden;
   max-height: 100vh;
-  margin: 0 24px;
+  margin: 0 70px;
 }
 
 .notificationAnimation {
@@ -14,28 +14,27 @@
   animation-duration: 6s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  margin: 6px 0;
+  margin: 15px 0;
 }
 
 .notification {
-  border-radius: 4px;
   background: rgba(100,0,0,0.5);
-  padding: 12px;
-  width: 200px;
-  border-radius: 4px;
+  padding: 30px;
+  width: 500px;
+  border-radius: 10px;
 }
 
 .notificationText {
   color: white;
   word-wrap:break-word;
-  font-size: 16px;
+  font-size: 40px;
   font-weight: 400;
   margin: 0;
 }
 
 .notificationTime {
   color: orange;
-  font-size: 14px;
+  font-size: 35px;
   font-weight: 300;
   margin: 0;
 }
@@ -51,13 +50,13 @@
   }
   12% {
     opacity: 1;
-    max-height: 100px;
-    margin: 6px 0;
+    max-height: 100vh;
+    margin: 15px 0;
   }
   88% {
     opacity: 1;
-    max-height: 100px;
-    margin: 6px 0;
+    max-height: 100vh;
+    margin: 15px 0;
   }
   95% {
     opacity: 0;

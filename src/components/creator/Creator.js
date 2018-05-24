@@ -1,34 +1,28 @@
 import React from 'react';
 import Context from '../../Context';
 import './Creator.css';
+import Button from '../button/Button';
+import TextInput from '../textInput/TextInput';
 
 const Creator = () => (
   <div className="creator">
     <Context.Consumer>
       {context => (
         <React.Fragment>
-          <input
+          <TextInput
             id="creatorInput"
-            ref={(ip) => { this.myInp = ip; }}
-            type="text"
             autoFocus
-            placeholder="Create a notification!"
+            focusOnBlur
+            hint="Create a notification!"
             value={context.state.input}
             onChange={context.handleInputChange}
             onKeyPress={context.handleInputKeyPress}
-            autoComplete="off"
-            autoCorrect="off"
-            spellCheck="false"
           />
-          <button
+          <Button
             id="creatorButton"
-            onClick={() => {
-              context.addNotification();
-              this.myInp.focus();
-            }}
-          >
-            Add Notification
-          </button>
+            label="Add Notification"
+            onClick={context.addNotification}
+          />
         </React.Fragment>
       )}
     </Context.Consumer>
