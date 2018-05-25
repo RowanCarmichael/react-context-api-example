@@ -11,23 +11,30 @@ const TextInput = ({
   onKeyPress,
   focusOnBlur,
   onBlur,
-}) => (
-  <input
-    id={id}
-    className="input"
-    ref={focusOnBlur ? (input) => { this.inputRef = input; } : null}
-    type="text"
-    autoFocus={autoFocus}
-    placeholder={hint}
-    value={value}
-    onChange={onChange}
-    onBlur={focusOnBlur ? () => { this.inputRef.focus(); } : onBlur}
-    onKeyPress={onKeyPress}
-    autoComplete="off"
-    autoCorrect="off"
-    spellCheck="false"
-  />
-);
+}) => {
+  const inputRef = React.createRef();
+  const focus = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <input
+      id={id}
+      className="input"
+      ref={focusOnBlur ? inputRef : null}
+      type="text"
+      autoFocus={autoFocus}
+      placeholder={hint}
+      value={value}
+      onChange={onChange}
+      onBlur={focusOnBlur ? focus : onBlur}
+      onKeyPress={onKeyPress}
+      autoComplete="off"
+      autoCorrect="off"
+      spellCheck="false"
+    />
+  );
+};
 
 TextInput.propTypes = {
   id: PropTypes.string,
