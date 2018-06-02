@@ -2,6 +2,7 @@
   "name": "react-context-api-example",
   "version": "0.0.0",
   "repository": "https://github.com/RowanCarmichael/react-context-api-example.git",
+  "homepage": "https://RowanCarmichael.github.io/react-context-api-example",
   "author": "Rowan Carmichael <carmichaelr@hotmail.co.uk>",
   "license": "MIT",
   "private": false,
@@ -16,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -30,6 +33,7 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
+    "gh-pages": "^1.2.0",
     "prop-types": "^15.6.1"
   }
 }
