@@ -2,6 +2,9 @@
 
 Example project using the new context api introduced in React v16.3.0
 
+## Example page
+https://rowancarmichael.github.io/react-context-api-example/
+
 ## Running locally
 
 1. pull master brach from https://github.com/RowanCarmichael/react-context-api-example
